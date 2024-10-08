@@ -1,12 +1,21 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
+# Node modules
 node_modules/
 
-# Expo
+# Expo files
 .expo/
+.expo-shared/
 dist/
 web-build/
+
+# Log Files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
 
 # Native
 *.orig.*
