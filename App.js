@@ -72,6 +72,10 @@ const styles = StyleSheet.create({
   },
 });
 
+<TouchableOpacity onPress={handlePasswordRecovery}>
+        <Text style={styles.link}>Забыли пароль?</Text>
+      </TouchableOpacity>
+
 export default AuthScreen;
 
 
