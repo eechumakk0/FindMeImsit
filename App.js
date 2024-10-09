@@ -1,6 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, Alert, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert, TextInput, TouchableOpacity } from 'react-native';
+
+const AuthScreen = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    // Обработка логики входа (например, API вызов)
+    console.log('Logging in with:', email, password);
+  };
+
+  const handleRegister = () => {
+    // Обработка логики регистрации (например, API вызов)
+    console.log('Registering with:', email, password);
+  };
+
+  const handlePasswordRecovery = () => {
+    // Обработка логики восстановления пароля
+    console.log('Recovering password for:', email);
+  };
+
+
+
 
 export default function App() {
   const [username, setUsername] = useState(''); // Храним имя пользователя в состоянии
