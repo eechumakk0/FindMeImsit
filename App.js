@@ -20,7 +20,32 @@ const AuthScreen = () => {
     // Обработка логики восстановления пароля
     console.log('Recovering password for:', email);
   };
-
+  
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Вход / Регистрация</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Электронная почта"
+        value={email}
+        onChangeText={setEmail}
+        keyboardType="email-address"
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Пароль"
+        value={password}
+        onChangeText={setPassword}
+        secureTextEntry
+      />
+      <Button title="Войти" onPress={handleLogin} />
+      <Button title="Зарегистрироваться" onPress={handleRegister} />
+      <TouchableOpacity onPress={handlePasswordRecovery}>
+        <Text style={styles.link}>Забыли пароль?</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 
 
