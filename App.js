@@ -154,6 +154,39 @@ const HomeScreen = ({ navigation }) => {
 
 export default HomeScreen;
 
+// SearchScreen.js
+import React, { useState } from 'react';
+import { View, Text, Button, TextInput, Switch } from 'react-native';
+
+const SearchScreen = ({ navigation }) => {
+  const [age, setAge] = useState('');
+  const [fullTime, setFullTime] = useState(false);
+
+  const handleSearch = () => {
+    // Здесь логика поиска вакансий
+  };
+
+  return (
+    <View style={{ flex: 1, padding: 20 }}>
+      <Text>Возраст:</Text>
+      <TextInput
+        placeholder="Введите возраст"
+        value={age}
+        onChangeText={setAge}
+      />
+
+      <Text>Полный рабочий день:</Text>
+      <Switch
+        value={fullTime}
+        onValueChange={(value) => setFullTime(value)}
+      />
+
+      <Button title="Поиск" onPress={handleSearch} />
+    </View>
+  );
+};
+
+export default SearchScreen;
 
 
 
