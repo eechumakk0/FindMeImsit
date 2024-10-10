@@ -125,3 +125,37 @@ const styles = StyleSheet.create({
 
 export default App;
 });
+
+
+// HomeScreen.js
+import React from 'react';
+import { View, Text, Button, FlatList } from 'react-native';
+
+const HomeScreen = ({ navigation }) => {
+  const jobListings = [/* массив вакансий */];
+
+  return (
+    <View style={{ flex: 1, padding: 20 }}>
+      <Button title="Поиск по критериям" onPress={() => navigation.navigate('Search')} />
+
+      <FlatList
+        data={jobListings}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View>
+            <Text>{item.title}</Text>
+            <Text>{item.company}</Text>
+          </View>
+        )}
+      />
+    </View>
+  );
+};
+
+export default HomeScreen;
+
+
+
+
+
+
